@@ -2,7 +2,7 @@
 
 import React from 'react';
 import './App.css';
-
+import data from './components/assets/data.json';
 import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
@@ -14,7 +14,9 @@ class App extends React.Component {
       <div>
 
         <Header />
-        <Main />
+        <Main 
+		data = {data} // send data to the main Component 
+		 />
         <Footer />
         
       </div>
