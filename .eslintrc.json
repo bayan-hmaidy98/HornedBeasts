@@ -1,6 +1,10 @@
 {
     "extends": "eslint:recommended",
+    
+    "parser": "babel-eslint",
     "parserOptions": {
+      "sourceType": "module",
+      "allowImportExportEverywhere": true,
       "ecmaVersion": 8
     },
     "env": {
@@ -15,7 +19,7 @@
         "always"
       ],
       "indent": [
-        "error",
+        "off",
         2
       ],
       "new-cap": "warn",
@@ -44,6 +48,8 @@
           "allowTemplateLiterals": true
         }
       ],
-      "semi": "error"
+      "semi": "error",
+	  "no-unused-vars": ["error", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }]
     }
   }
+  
