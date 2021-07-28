@@ -1,10 +1,10 @@
 import React from 'react';
-import Main from './Components/Main';
-import Header from './Components/Header';
-import Footer from './Components/Footer';
+import Main from './components/Main';
+import Header from './components/Header';
+import Footer from './components/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Data from './Components/assets/data.json';
-import SelectedBeast from './Components/SelectedBeast';
+import Data from './components/assets/data.json';
+import SelectedBeast from './components/SelectedBeast';
 import Container from 'react-bootstrap/Container';
 
 import './App.css';
