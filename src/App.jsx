@@ -6,8 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Data from './Components/assets/data.json';
 import SelectedBeast from './Components/SelectedBeast';
 import Container from 'react-bootstrap/Container';
-import { Row } from 'react-bootstrap';
-import { Col } from 'react-bootstrap';
+
 import './App.css';
 
 class App extends React.Component {
