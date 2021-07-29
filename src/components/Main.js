@@ -20,6 +20,11 @@ class Main extends React.Component {
                 title={element.title}
                 // description={element.description}
                 image_url={element.image_url}
+				updateVisible={this.props.updateVisible}
+				modalData={this.props.modalData}
+
+
+
 
               />
             );
