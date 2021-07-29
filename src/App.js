@@ -7,7 +7,9 @@ import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
 import Data from './components/assets/data.json';
+
 import SelectedBeast from './components/SelectedBeast';
+
 
 
 class App extends React.Component {
@@ -26,13 +28,17 @@ class App extends React.Component {
 			title: title,
 			description: description,
 			image_url: image_url
+
 		});
+
 	}
 
 	UpdateTheModel = () => {
 		this.setState ({
 			shown: !this.state.shown
+
 		});
+
 	}
 	
 
@@ -46,6 +52,7 @@ class App extends React.Component {
 		title = {this.state.title}
 		description = {this.state.description}
 		image_url = {this.state.image_url}
+
 		updateModel = {this.UpdateTheModel}
 		modalData={this.modalData}
 		 />
@@ -53,6 +60,7 @@ class App extends React.Component {
 		Data={Data} 
 		updateModel = {this.UpdateTheModel}
 		modalData={this.modalData}
+
 		/>
         <Footer />
         
