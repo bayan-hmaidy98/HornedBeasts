@@ -1,37 +1,37 @@
-import React from "react";
-import Modal from 'react-awesome-modal';
-import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
+import React from 'react';
+import Modal from 'react-bootstrap/Modal';
+
+import Button from 'react-bootstrap/Button';
 
 class SelectedBeast extends React.Component {
-    render() {
-      return (
- <Modal 
- visible={this.props.visible}
- width="700"
- height="600"
- effect="fadeInUp"
- onClickAway={this.props.updateVisible}
->
- <Card style={{ width: '100%', height: '70%' ,textAlign: 'center'}}>
-
-<Card.Img style={{ width: '100%', height: '100%' }} variant="top" src={this.props.url} onClick={this.props.updateVisible} 
-
-      title={this.props.title} />
-<Card.Body>
-<Card.Title>{this.props.title}</Card.Title>
-<Card.Text>
-{this.props.des}
-</Card.Text>
+	render() {
+		console.log(this.props);
+		return (
 
 
-<Button variant="danger" onClick={this.props.updateVisible} > close</Button>
+			<Modal show={this.props.show} onHide={this.props.hideModal}>
+				<Modal.Header closeButton>
+					<Modal.Title>{this.props.title}</Modal.Title>
+				</Modal.Header>
 
-</Card.Body>
-</Card>
-</Modal>
+				<Modal.Body>
+					
+					<img style={{ width: "18rem" }}
+					src={this.props.image_url} 
+					alt={this.props.title} />
+					
+					<p>{this.props.description}</p>
 
-);
-}
+				</Modal.Body>
+				<Modal.Footer>
+					<Button variant="secondary" onClick={this.props.hideModal}>
+						Close
+					</Button>
+
+				</Modal.Footer>
+			</Modal>
+
+		);
+	}
 }
 export default SelectedBeast;

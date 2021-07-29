@@ -17,6 +17,13 @@ class HornedBeasts extends React.Component {
 	  this.setState({
 	    numberOfVotes: this.state.numberOfVotes += 1
 	  });
+	//   this.props.hideModal();
+	  this.props.showModal();
+      this.props.modalData(
+      this.props.title,
+      this.props.image_url,
+      this.props.description
+    );
 	}
 
 	render() {
@@ -28,7 +35,7 @@ class HornedBeasts extends React.Component {
 	        <Card.Body>
 	          <Card.Title>{this.props.title}</Card.Title>
 	          <Card.Text>
-							❤️{this.props.description} {this.state.numberOfVotes}
+							{this.props.description} {this.state.numberOfVotes}❤️
 	          </Card.Text>
 
 	        </Card.Body>

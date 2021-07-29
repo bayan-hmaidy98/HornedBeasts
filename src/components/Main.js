@@ -7,34 +7,31 @@ import HornedBeast from './HornedBeasts';
 class Main extends React.Component {
 
 
-	
+	render() {
+		return (
+			<main>
+				{
+					<Row xs={1} md={3}>;
+						{data.map(element => {
+							return (
+								<HornedBeast
+									title={element.title}
 
-  render() {
-    return (
-      <main>
-        {
-			<Row xs={1} md={3}>;
-				   {data.map(element => {
-            return (
-              <HornedBeast
-                title={element.title}
-                // description={element.description}
-                image_url={element.image_url}
-				updateVisible={this.props.updateVisible}
-				modalData={this.props.modalData}
+									image_url={element.image_url}
+									description={element.description}
+									showModal={this.props.showModal}
+									modalData={this.props.modalData}
+									
 
+								/>
+							);
+						})}
+					</Row>
+				}
 
-
-
-              />
-            );
-          })}
-			</Row>
-        }
-
-      </main>
-    );
-  }
+			</main>
+		);
+	}
 }
 
 export default Main;
