@@ -1,8 +1,8 @@
 import React from 'react';
-import { Row } from 'react-bootstrap';
 
 import data from './assets/data.json';
 import HornedBeast from './HornedBeasts';
+import { Row } from 'react-bootstrap';
 
 class Main extends React.Component {
 
@@ -16,7 +16,6 @@ class Main extends React.Component {
 							return (
 								<HornedBeast
 									title={element.title}
-
 									image_url={element.image_url}
 									description={element.description}
 									showModal={this.props.showModal}
