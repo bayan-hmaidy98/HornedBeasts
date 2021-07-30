@@ -6,8 +6,10 @@ import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
 import Data from './components/assets/data.json';
+
 import SelectedBeast from './components/SelectedBeast';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 class App extends React.Component {
@@ -26,15 +28,12 @@ class App extends React.Component {
 			title: title,
 			description: description,
 			image_url: image_url
+
 		});
+
 	}
 
-	// updateTheModel = () => {
-	// 	this.setState ({
-	// 		shown: !this.state.shown
-	// 	});
-	// }
-	
+
 	showModal = () => {
 		this.setState({
 			show: true,
@@ -44,7 +43,9 @@ class App extends React.Component {
 	hideModal = () => {
 		this.setState({
 			show: false,
+
 		});
+
 	}
 
   render() {
@@ -52,18 +53,20 @@ class App extends React.Component {
       <div>
 
         <Header />
+
 		<SelectedBeast 
 		show= {this.state.show}
 		title= {this.state.title}
 		description= {this.state.description}
 		image_url= {this.state.image_url}
 		hideModal= {this.hideModal}
+
 		 />
         <Main 
 		Data={Data} 
 		showModal= {this.showModal}
 		modalData={this.modalData}
-	
+
 		/>
         <Footer />
         
