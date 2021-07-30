@@ -31,6 +31,8 @@ class SelectedBeast extends React.Component {
 				</Modal.Footer>
 			</Modal>
 
+			
+
 		);
 	}
 }
