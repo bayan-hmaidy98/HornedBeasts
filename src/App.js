@@ -6,7 +6,7 @@ import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
 import Data from './components/assets/data.json';
-
+import HornsForm from './components/HornsForm';
 import SelectedBeast from './components/SelectedBeast';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -47,13 +47,24 @@ class App extends React.Component {
 		});
 
 	}
+	updateTheNumber = (submittedNumber) => {
+		let number = Data.filter(item => {
+			if (item.horns === submittedNumber) return item;
+			// else if (number.horns === "All") return item; 
+			
+		});
+		this.setState({
+			submitted: number
+		});
+	}
 
   render() {
     return (
       <div>
 
         <Header />
-
+		<HornsForm 
+		updateTheNumber = {this.updateTheNumber}/>
 		<SelectedBeast 
 		show= {this.state.show}
 		title= {this.state.title}
