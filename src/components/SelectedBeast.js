@@ -17,11 +17,11 @@ class SelectedBeast extends React.Component {
 				</Modal.Header>
 
 				<Modal.Body>
-					
-					<img style={{ width: "18rem" }}
-					src={this.props.image_url} 
-					alt={this.props.title} />
-					
+
+					<img style={{ width: '18rem' }}
+						src={this.props.image_url}
+						alt={this.props.title} />
+
 					<p>{this.props.description}</p>
 
 				</Modal.Body>
@@ -33,7 +33,7 @@ class SelectedBeast extends React.Component {
 				</Modal.Footer>
 			</Modal>
 
-			
+
 
 		);
 	}
