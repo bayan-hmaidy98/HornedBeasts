@@ -13,6 +13,8 @@ export class FilterForm extends Component {
 		this.props.updateTheNumber(this.setState.num);
 	};
 
+
+	
 	render() {
 		return (
 			<div>
