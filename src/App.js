@@ -20,14 +20,14 @@ class App extends React.Component {
 			show: false,
 			title: null,
 			description: null, 
-			image_url: null
+			image_url: null,
 		};
 	}
 	modalData = (title, description, image_url) => {
 		this.setState({
 			title: title,
-			description: description,
-			image_url: image_url
+			image_url: description,
+			description: image_url
 
 		});
 
@@ -47,16 +47,7 @@ class App extends React.Component {
 		});
 
 	}
-	updateTheNumber = (submittedNumber) => {
-		let number = Data.filter(item => {
-			if (item.horns === submittedNumber) return item;
-			// else if (number.horns === "All") return item; 
-			
-		});
-		this.setState({
-			submitted: number
-		});
-	}
+
 
   render() {
     return (
@@ -64,7 +55,7 @@ class App extends React.Component {
 
         <Header />
 		<HornsForm 
-		updateTheNumber = {this.updateTheNumber}/>
+		Data ={Data}/>
 		<SelectedBeast 
 		show= {this.state.show}
 		title= {this.state.title}
