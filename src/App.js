@@ -26,8 +26,9 @@ class App extends React.Component {
 	modalData = (title, description, image_url) => {
 		this.setState({
 			title: title,
-			description: description,
-			image_url: image_url
+			image_url: description,
+			description: image_url,
+			
 
 		});
 
@@ -59,6 +60,7 @@ class App extends React.Component {
 	}
 
   render() {
+	  console.log(this.state.image_url);
     return (
       <div>
 

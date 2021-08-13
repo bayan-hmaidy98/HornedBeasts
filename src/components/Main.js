@@ -21,7 +21,6 @@ class Main extends React.Component {
 									showModal={this.props.showModal}
 									modalData={this.props.modalData}
 
-
 								/>
 							);
 						})}
