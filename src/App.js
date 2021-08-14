@@ -27,7 +27,9 @@ class App extends React.Component {
 		this.setState({
 			title: title,
 			image_url: description,
+
 			description: image_url
+
 
 		});
 
@@ -50,6 +52,7 @@ class App extends React.Component {
 
 
   render() {
+	  console.log(this.state.image_url);
     return (
       <div>
 
