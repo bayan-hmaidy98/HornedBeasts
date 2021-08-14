@@ -35,7 +35,7 @@ export class FilterForm extends Component {
 	render() {
 		return (
 			<div>
-				<Form.Select onChange={e => this.updateTheNumber(e)} aria-label="Floating label select example" name="select" >
+				<Form.Select onChange={event => this.updateTheNumber(event)} aria-label="Floating label select example" name="select" >
 
 					<option value="1">One</option>
 					<option value="2">Two</option>
